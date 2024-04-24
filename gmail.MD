@@ -21,7 +21,7 @@ systemctl enable postfix
 ```
 * Open the /etc/postfix/main.cf file.
 ```
-vi /etc/postfix/main.cf 
+vim /etc/postfix/main.cf 
 ```
 append the following into the file at the end
 
@@ -42,7 +42,7 @@ touch /etc/postfix/sasl_passwd
 ```
 Add the following line to the file:
 ```
-vi /etc/postfix/sasl_passwd
+vim /etc/postfix/sasl_passwd
 ```
 ```
 [smtp.gmail.com]:587 xyz:AppPassword
