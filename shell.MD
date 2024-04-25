@@ -11,3 +11,6 @@ Shell is CLI(Command line interface) that interprets/executes/validates the comm
 There are different types of shells like Zshell, CShell, Kshell. But Bash is popular and recent that includes all the features.
 
 **NOTE: Consider Bash shell or Shell both are same**
+
+# How to call another shell script from current shell script
+
