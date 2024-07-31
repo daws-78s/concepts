@@ -1,0 +1,22 @@
+route:
+  group_by: ['alertname']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 1h
+  receiver: 'ses'
+receivers:
+  - name: 'ses'
+    email_configs:
+      - smarthost: email-smtp.us-east-1.amazonaws.com:587
+        auth_username: your-username
+        auth_password: your-password
+        from: your-from-address
+        to: your-to-address
+        headers:
+          subject: Prometheus Mail Alert
+inhibit_rules:
+  - source_match:
+      severity: 'critical'
+    target_match:
+      severity: 'warning'
+    equal: ['alertname', 'dev', 'instance']

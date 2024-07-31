@@ -1,0 +1,10 @@
+groups:
+- name: InstanceDown
+  rules:
+  - alert: InstanceDownAlert
+    expr: up < 1
+    for: 1m
+    labels:
+      severity: severity
+    annotations:
+      summary: Instance is Down
